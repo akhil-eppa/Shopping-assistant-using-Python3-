@@ -9,12 +9,13 @@ url = "https://www.amazon.in/dp/B07864V6CK/?coliid=I2K8I48NQ1X50P&colid=2TRR7D71
 price = ""
 
 r = requests.get(url)
-soup = bs(r.text, 'html.parser')
+soup = bs(r.text)
 
 """
 # Writing the source code to source.txt
 f = open("source.txt", 'w+')
 f.write(str(soup.encode('utf-8')))
+f.close()
 """
 
 # Selecting the price element from the source and fortmatting it.
