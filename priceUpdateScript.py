@@ -32,4 +32,4 @@ price = int(price)/100.0
 now = datetime.now()
 dt = now.strftime("\n%Y %M %d %A %I %M %S %p")
 with open("priceHistory.csv", 'a+') as f:
-        f.write(dt + ',' + str(price))
+        f.write(dt + ', ' + str(price))
