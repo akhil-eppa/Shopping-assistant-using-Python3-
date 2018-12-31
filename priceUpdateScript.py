@@ -1,14 +1,14 @@
 """
-My attempt at parsing the HTML source of a sample amazon product.
+Script which handles parsing through the HTML source of the webpage, selects the price 
+element and writes it along with the corresponding time to priceHistory.csv
 """
 
 from bs4 import BeautifulSoup as bs
 import requests
 from datetime import datetime
 
+# Change the url to that of the desired product.
 url = "https://www.amazon.in/dp/B07864V6CK/?coliid=I2K8I48NQ1X50P&colid=2TRR7D714XRU4&psc=0&ref_=lv_ov_lig_dp_it"
-price = ""
-
 r = requests.get(url)
 soup = bs(r.text)
 
@@ -21,6 +21,7 @@ f.close()
 
 # Selecting the price element from the source and fortmatting it.
 s = soup.select('#priceblock_ourprice')
+price = ""
 for char in str(s):
     if char.isdigit():
         price += char
