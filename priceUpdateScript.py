@@ -30,6 +30,6 @@ price = int(price)/100.0
 # Writing the price along with corresponding time to priceHistory.csv
 # The DateTime data is in the YEAR MONTH DATE DAY HOUR MINUTE SECOND MERIDIAN format.
 now = datetime.now()
-dt = now.strftime("\n%Y %M %d %A %I %M %S %p")
+dt = now.strftime("\n%Y %B %d %A %I %M %S %p")
 with open("priceHistory.csv", 'a+') as f:
         f.write(dt + ', ' + str(price))
