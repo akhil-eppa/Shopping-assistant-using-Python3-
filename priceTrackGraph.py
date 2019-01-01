@@ -1,5 +1,5 @@
 """
-Script which handles the visualising part. For now it display a graph detailing the price vs time.
+Script which handles the visualising part. For now it display a graph detailing the price vs time in days.
 """
 
 import matplotlib.pyplot as plt
