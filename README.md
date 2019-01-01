@@ -1,4 +1,4 @@
-# Shoppping Assistant
+# Shopping Assistant
 Helps you shop better!
 
 A **Python3** application that tracks a product price based on the URL given by the user.
