@@ -25,15 +25,15 @@ every 30 minutes for now.
 for i in range(48):
     dt = datetime.datetime.now()
     later_time = dt + min30
-    #while datetime.datetime.now() < later_time:
-     #   time.sleep(1)
+    while datetime.datetime.now() < later_time:
+       time.sleep(1)
     
     # Change the url to that of the desired product.
     url = "https://www.amazon.in/dp/B07864V6CK/?coliid=I2K8I48NQ1X50P&colid=2TRR7D714XRU4&psc=0&ref_=lv_ov_lig_dp_it"
     r = requests.get(url)
     soup = bs(r.text,features="html.parser")
 
-    # Selecting the price element from the source and fortmatting it.
+    # Selecting the price element from the source and formatting it.
     s = soup.select('#priceblock_ourprice')
     price = ""
     for char in str(s):
